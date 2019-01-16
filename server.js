@@ -15,7 +15,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Home
 app.get("/", function(req, res, next){
-    res.render("home");
+    res.render("home", {name: "Agung"});
+});
+
+// about
+app.get("/about", function(req, res, next){
+    res.render("about");
 });
 
 // Server
